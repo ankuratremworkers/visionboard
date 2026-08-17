@@ -1,0 +1,107 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100svh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.app-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.app-header-brand h1 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.app-header-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.app-header-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.key-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.key-badge-ok {
+  color: var(--green);
+  background: var(--green-soft);
+}
+
+.key-badge-missing {
+  color: var(--text-faint);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.settings-trigger {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.settings-trigger:hover {
+  color: var(--text);
+  border-color: var(--border-hover);
+  transform: rotate(30deg);
+}
+
+.app-main {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .app-header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .app-header-search {
+    order: 3;
+    width: 100%;
+  }
+}
